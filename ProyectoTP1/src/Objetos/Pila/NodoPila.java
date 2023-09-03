@@ -1,4 +1,4 @@
-package Objetos;
+package Objetos.Pila;
 
 public class NodoPila {
     private Object dato;

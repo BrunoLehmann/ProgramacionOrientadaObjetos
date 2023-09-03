@@ -1,8 +1,8 @@
-package Objetos;
+package Objetos.ListaSimple;
 
-public class Nodo {
+public class NodoListaSimple {
     private Object dato;
-    private Nodo siguiente;
+    private NodoListaSimple siguiente;
 
     public void setDato(Object dato){
         this.dato = dato;
@@ -12,11 +12,11 @@ public class Nodo {
        return dato;
     }
 
-    public void setProximo(Nodo siguiente){
+    public void setProximo(NodoListaSimple siguiente){
         this.siguiente = siguiente;
     }
 
-    public Nodo getProximo(){
+    public NodoListaSimple getProximo(){
         return siguiente;
     }
 }
