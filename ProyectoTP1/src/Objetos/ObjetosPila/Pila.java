@@ -1,4 +1,4 @@
-package Objetos.Pila;
+package Objetos.ObjetosPila;
 
 public class Pila {
     private NodoPila tope = null;

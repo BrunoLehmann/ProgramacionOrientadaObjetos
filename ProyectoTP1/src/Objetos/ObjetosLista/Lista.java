@@ -1,4 +1,4 @@
-package Objetos.ListaSimple;
+package Objetos.ObjetosLista;
 
 public class Lista {
     private NodoListaSimple primerNodoListaSimple;
