@@ -1,3 +1,4 @@
+import Objetos.ObjetosCola.Cola;
 import Objetos.ObjetosLista.Lista;
 import Objetos.ObjetosListaDobleEnlazada.ListaDobleEnlazada;
 import Objetos.ObjetosPila.Pila;
@@ -64,6 +65,22 @@ public class Main {
         System.out.println("Desapilado 5: " +pila.desapilar());
         System.out.println("Desapilado con error: " + pila.desapilar());
        */
+
+        /*
+        //PRUEBA COLA
+
+        Cola cola = new Cola();
+
+        cola.encolar("1");
+        cola.encolar("2");
+        cola.encolar("3");
+        cola.encolar("4");
+        cola.encolar("5");
+
+        System.out.println(cola);
+        cola.desencolar();
+        System.out.println(cola);
+    */
 
     }
 

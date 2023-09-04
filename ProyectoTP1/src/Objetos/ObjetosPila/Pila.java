@@ -3,10 +3,6 @@ package Objetos.ObjetosPila;
 public class Pila {
     private NodoPila tope = null;
 
-    public void setTope(NodoPila tope) {
-        this.tope = tope;
-    }
-
     public Object getTope() {
         return tope.getDato();
     }

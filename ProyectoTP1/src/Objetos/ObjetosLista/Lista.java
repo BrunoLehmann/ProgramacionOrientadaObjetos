@@ -1,7 +1,7 @@
 package Objetos.ObjetosLista;
 
 public class Lista {
-    private NodoListaSimple primerNodoListaSimple;
+    private NodoSimple primerNodoListaSimple;
 
     public Lista crearLista(){
         primerNodoListaSimple = null;
@@ -14,7 +14,7 @@ public class Lista {
 
     public Integer size(){
         Integer cantidad = 1;
-        NodoListaSimple nodoListaSimpleAux = primerNodoListaSimple;
+        NodoSimple nodoListaSimpleAux = primerNodoListaSimple;
 
         while (nodoListaSimpleAux.getProximo() != null){
             nodoListaSimpleAux = nodoListaSimpleAux.getProximo();
@@ -24,13 +24,13 @@ public class Lista {
     }
 
     public void agregar(Object dato){
-        NodoListaSimple nuevoNodoListaSimple = new NodoListaSimple();
+        NodoSimple nuevoNodoListaSimple = new NodoSimple();
         nuevoNodoListaSimple.setDato(dato);
 
         if(this.esVacia()){
             primerNodoListaSimple = nuevoNodoListaSimple;
         }else{
-            NodoListaSimple nodoListaSimpleAux = primerNodoListaSimple;
+            NodoSimple nodoListaSimpleAux = primerNodoListaSimple;
             while(nodoListaSimpleAux.getProximo() != null){
                 nodoListaSimpleAux = nodoListaSimpleAux.getProximo();
             }
@@ -41,7 +41,7 @@ public class Lista {
     public Object recuperar(Integer posicion){
         Integer index = 0;
         Object dato = null;
-        NodoListaSimple nodoListaSimpleAux = primerNodoListaSimple;
+        NodoSimple nodoListaSimpleAux = primerNodoListaSimple;
         while((index < posicion) && (nodoListaSimpleAux != null)) {
             nodoListaSimpleAux = nodoListaSimpleAux.getProximo();
             index += 1;
@@ -55,8 +55,8 @@ public class Lista {
         if (posicion <= this.size()) {
             if (posicion > 0) {
                 Integer index = 0;
-                NodoListaSimple nodoListaSimpleAux = primerNodoListaSimple;
-                NodoListaSimple nodoListaSimpleAnterior = null;
+                NodoSimple nodoListaSimpleAux = primerNodoListaSimple;
+                NodoSimple nodoListaSimpleAnterior = null;
                 while ((nodoListaSimpleAux != null) && (index < posicion)) {
                     nodoListaSimpleAnterior = nodoListaSimpleAux;
                     nodoListaSimpleAux = nodoListaSimpleAux.getProximo();
@@ -72,7 +72,7 @@ public class Lista {
 
 
     public void insertar(Integer posicion, Object dato){
-        NodoListaSimple nuevoNodoListaSimple = new NodoListaSimple();
+        NodoSimple nuevoNodoListaSimple = new NodoSimple();
         nuevoNodoListaSimple.setDato(dato);
 
         if(posicion == 0){
@@ -80,8 +80,8 @@ public class Lista {
             primerNodoListaSimple = nuevoNodoListaSimple;
         }else if(posicion > 0) {
             Integer index = 0;
-            NodoListaSimple nodoListaSimpleAux = primerNodoListaSimple;
-            NodoListaSimple nodoListaSimpleAnt = null;
+            NodoSimple nodoListaSimpleAux = primerNodoListaSimple;
+            NodoSimple nodoListaSimpleAnt = null;
             while ((nodoListaSimpleAux != null) && (index < posicion)) {
                 nodoListaSimpleAnt = nodoListaSimpleAux;
                 nodoListaSimpleAux = nodoListaSimpleAux.getProximo();
@@ -96,7 +96,7 @@ public class Lista {
 
     public String toString(){
         String acumulador = "";
-        NodoListaSimple nodoListaSimpleAux = primerNodoListaSimple;
+        NodoSimple nodoListaSimpleAux = primerNodoListaSimple;
         while(nodoListaSimpleAux != null){
             acumulador += (String) nodoListaSimpleAux.getDato() +  "\n";
             nodoListaSimpleAux = nodoListaSimpleAux.getProximo();
