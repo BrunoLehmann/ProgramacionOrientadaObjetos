@@ -39,9 +39,6 @@ public class Palabra {
         return puntaje;
     }
 
-    public String getPalabra() {
-        return palabra;
-    }
 
     public String toString(){
         return palabra;

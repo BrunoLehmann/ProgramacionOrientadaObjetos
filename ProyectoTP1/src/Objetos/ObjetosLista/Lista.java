@@ -13,7 +13,7 @@ public class Lista {
     }
 
     public Integer size(){
-        Integer cantidad = 1;
+        int cantidad = 1;
         NodoSimple nodoListaSimpleAux = primerNodoListaSimple;
 
         while (nodoListaSimpleAux.getProximo() != null){
@@ -39,7 +39,7 @@ public class Lista {
     }
 
     public Object recuperar(Integer posicion){
-        Integer index = 0;
+        int index = 0;
         Object dato = null;
         NodoSimple nodoListaSimpleAux = primerNodoListaSimple;
         while((index < posicion) && (nodoListaSimpleAux != null)) {

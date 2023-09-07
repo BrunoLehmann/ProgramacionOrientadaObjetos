@@ -1,4 +1,19 @@
+import Objetos.ObjetosLista.Lista;
 import Objetos.ObjetosListaTareas.AdministradorTareas;
+
+import Objetos.ObjetosPila.Pila;
+import Objetos.ObjetosListaDobleEnlazada.ListaDobleEnlazada;
+import Objetos.ObjetoContrasena.Contrasena;
+import Objetos.ObjetosEcuaciones.EcuacionSegundoGrado;
+import Objetos.ObjetosBiblioteca.Libro;
+import Objetos.ObjetosCola.Cola;
+import Objetos.ObjetosFecha.Fecha;
+import Objetos.ObjetosListaTareas.Tarea;
+import Objetos.ObjetosListaTareas.Estado;
+import Objetos.ObjetosJuegoPalabras.Jugador;
+
+
+
 
 import java.util.Scanner;
 
@@ -6,7 +21,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Trabajo Practico 1.");
-        /*
+
         //PRUEBA DE LISTA SIMPLE ENLAZADA
         Lista lista = new Lista();
 
@@ -20,9 +35,9 @@ public class Main {
 
         //lista.eliminarPos(0);
         System.out.println(lista);
-        */
 
-        /*
+
+
         //PRUEBA PARA LISTA ENLAZADA DOBLE
         ListaDobleEnlazada listaDoble = new ListaDobleEnlazada();
 
@@ -38,9 +53,9 @@ public class Main {
 
         listaDoble.eliminarPos(3);
         System.out.println(listaDoble);
-        */
 
-        /*
+
+
         //PRUEBA DE PILA
         Pila pila = new Pila();
         pila.apilar("1");
@@ -64,9 +79,9 @@ public class Main {
         System.out.println("Desapilado 4: " +pila.desapilar());
         System.out.println("Desapilado 5: " +pila.desapilar());
         System.out.println("Desapilado con error: " + pila.desapilar());
-        */
 
-        /*
+
+
         //PRUEBA COLA
 
         Cola cola = new Cola();
@@ -80,8 +95,8 @@ public class Main {
         System.out.println(cola);
         cola.desencolar();
         System.out.println(cola);
-        */
-        /*
+
+
         //PRUEBA TAREAS
 
         Tarea superMercado = new Tarea("Ir al supermercado mañana", "10-10-2023", "13-10-2023"); //Falta para la fecha recordatorio
@@ -91,10 +106,10 @@ public class Main {
         System.out.println(superMercado.mostrarTarea() + " prioridad: " + consultaAuto.getPrioridad());
         System.out.println(consultaAuto.mostrarTarea() + " prioridad: " + consultaAuto.getPrioridad());
         System.out.println(cine.mostrarTarea() + " prioridad: " + cine.getPrioridad());
-        */
 
 
-        /*
+
+
         //Prueba Libros
 
         Libro hPotter = new Libro("Harry Potter y La Piedra Filosofal", "J.K Rowling", 557, 10);
@@ -109,9 +124,9 @@ public class Main {
         System.out.println("Presto un Harry Potter mas: " + hPotter.prestarLibro());
         System.out.println("Cantidad de libros prestados totales: " +hPotter.getLibrosPrestadosTotales());
 
-        */
 
-        /*
+
+
         // PRUEBA ECUACIONES
         EcuacionSegundoGrado ecuacion1 = new EcuacionSegundoGrado(3, 1, 3);
         EcuacionSegundoGrado ecuacion2 = new EcuacionSegundoGrado(5, 2, 0);
@@ -129,30 +144,29 @@ public class Main {
         System.out.println("Raicez de ecuacion 1:" + ecuacion3.calcularRaices());
         System.out.println("Ecuacion 3 para X = -1 : " + ecuacion3.calcularY(2));
 
-        */
 
 
-        /*
+
+
         // PRUEBA CONTRASENAS
+        System.out.println("Ingrese longitud de primera contraseña: ");
         int longitud = sc.nextInt();
         Contrasena contra = new Contrasena();
-        System.out.println("Ingrese longitud de primera contraseña: ");
         contra.generarContrasena(longitud);
         System.out.println("La contraseña es: " + contra.esFuerte());
         System.out.println("La contraseña es: " + contra.getContrasena());
 
-
+        System.out.println("Ingrese longitud de segunda contraseña: ");
         longitud = sc.nextInt();
         Contrasena contra2 = new Contrasena();
-        System.out.println("Ingrese longitud de segunda contraseña: ");
         contra2.generarContrasena(longitud);
         System.out.println("La contraseña es : " + contra2.esFuerte());
         System.out.println("La contraseña es: " +contra2.getContrasena());
 
 
-         */
 
-        /*
+
+
         //PRUEBAS FECHAS
 
         Fecha fecha = new Fecha("20-12-2021", "dd-MM-yyyy");
@@ -165,11 +179,11 @@ public class Main {
         System.out.println("Fecha2 < Fecha3 < Fecha1 : " + fecha3.estaEntre(fecha2, fecha));
         System.out.println("Fecha 1 > Fecha 2: " + fecha.mayorA(fecha2));
         System.out.println("Fecha 2 > Fecha 1: " + fecha2.mayorA(fecha));
-        */
+
 
 
         //PRUEBAS JUEGO PALABRAS
-        /*
+
         Jugador j1 = new Jugador("Bruno");
         Jugador j2 = new Jugador("Roman");
 
@@ -187,9 +201,9 @@ public class Main {
             System.out.println("Increible! Hubo un empate.");
         }
 
-        */
 
-        /*
+
+
         //PRUEBA GESTOR DE TAREAS
 
         AdministradorTareas gestorTareas = new AdministradorTareas();
@@ -209,7 +223,7 @@ public class Main {
 
         System.out.println("Tareas realizadas por colaborador bruno: \n" + gestorTareas.tareasRealizadasPorColaborador("bruno"));
         System.out.println("Tareas realizadas por colaborador joaquin: \n" + gestorTareas.tareasRealizadasPorColaborador("joaquin"));
-        */
+
     }
 
 }

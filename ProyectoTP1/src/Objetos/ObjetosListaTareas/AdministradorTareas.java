@@ -1,9 +1,6 @@
 package Objetos.ObjetosListaTareas;
 
-import Objetos.ObjetosListaTareas.Tarea;
-
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class AdministradorTareas {
@@ -110,7 +107,7 @@ public class AdministradorTareas {
     }
 
     public void marcarTareaRealizada(String descripcion, String fechaFinalizacion, String colaborador){
-        int posicion = 0;
+        int posicion;
         posicion = buscarTarea(descripcion);
         Tarea tarea;
         colaborador = colaborador.toLowerCase();
@@ -126,8 +123,7 @@ public class AdministradorTareas {
     }
 
     public Boolean colaboradorExiste(String colaborador){
-        Boolean res = false;
-        int index;
+        boolean res = false;
         colaborador = colaborador.toLowerCase();
         for (Object colab : colaboradores){
             if(colab.equals(colaborador)){

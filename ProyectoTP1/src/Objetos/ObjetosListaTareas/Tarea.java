@@ -41,6 +41,13 @@ public class Tarea {
         this.estado = estado;
         this.fechaRecordatorio = LocalDate.parse(fechaRecordatorio, formatter);
     }
+
+    public Tarea(String descripcion, String fechaLimite, String fechaRecordatorio, Estado estado){
+        this(descripcion, fechaLimite, fechaRecordatorio);
+        this.estado = estado;
+        this.fechaRecordatorio = LocalDate.parse(fechaRecordatorio, formatter);
+    }
+
     public Tarea(String descripcion, String fechaLimite, String fechaRecordatorio, Estado estado, Integer prioridad){
         this(descripcion, fechaLimite, estado);
         this.estado = estado;

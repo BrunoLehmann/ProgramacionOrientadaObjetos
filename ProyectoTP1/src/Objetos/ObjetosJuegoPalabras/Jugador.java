@@ -1,8 +1,5 @@
 package Objetos.ObjetosJuegoPalabras;
 
-import Objetos.ObjetosLista.Lista;
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 import java.util.LinkedList;
 
 public class Jugador {
