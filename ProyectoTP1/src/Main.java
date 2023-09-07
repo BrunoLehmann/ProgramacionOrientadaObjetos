@@ -1,10 +1,20 @@
+import Objetos.ObjetoContraseña.Contrasena;
 import Objetos.ObjetosEcuaciones.EcuacionSegundoGrado;
+import Objetos.ObjetosFecha.Fecha;
+import Objetos.ObjetosListaTareas.Estado;
+import Objetos.ObjetosListaTareas.Tarea;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Trabajo Practico 1.");
         /*
-     //PRUEBA DE LISTA SIMPLE ENLAZADA
+        //PRUEBA DE LISTA SIMPLE ENLAZADA
         Lista lista = new Lista();
 
         lista.agregar("1");
@@ -78,16 +88,16 @@ public class Main {
         cola.desencolar();
         System.out.println(cola);
         */
-
-        //PRUEBA TAREAS
         /*
-        Tarea superMercado = new Tarea("Ir al supermercado mañana", "10/10/2023");
-        Tarea consultaAuto = new Tarea("Consultar repuesto del auto", "05/09/2023", Estado.COMPLETA);
-        Tarea cine = new Tarea("Ir al cine a ver la nueva película de Marvel", "05/09/2023");
+        //PRUEBA TAREAS
 
-        System.out.println(superMercado.mostrarTarea());
-        System.out.println(consultaAuto.mostrarTarea());
-        System.out.println(cine.mostrarTarea());
+        Tarea superMercado = new Tarea("Ir al supermercado mañana", "10-10-2023", "13-10-2023"); //Falta para la fecha recordatorio
+        Tarea consultaAuto = new Tarea("Consultar repuesto del auto", "05-09-2023", "05-09-2023", Estado.COMPLETA); //Fecha de recordatorio es en el dia pero ya esta terminada
+        Tarea cine = new Tarea("Ir al cine a ver la nueva película de Marvel", "05-09-2023", "04-09-2023"); //Fecha recordatorio ya paso
+
+        System.out.println(superMercado.mostrarTarea() + " prioridad: " + consultaAuto.getPrioridad());
+        System.out.println(consultaAuto.mostrarTarea() + " prioridad: " + consultaAuto.getPrioridad());
+        System.out.println(cine.mostrarTarea() + " prioridad: " + cine.getPrioridad());
         */
 
 
@@ -128,12 +138,44 @@ public class Main {
 
         */
 
-        char a = 'A';
-        char z = '0';
+
+        /*
+        // PRUEBA CONTRASENAS
+        int longitud = sc.nextInt();
+        Contrasena contra = new Contrasena();
+        System.out.println("Ingrese longitud de primera contraseña: ");
+        contra.generarContrasena(longitud);
+        System.out.println("La contraseña es: " + contra.esFuerte());
+        System.out.println("La contraseña es: " + contra.getContrasena());
 
 
-        System.out.println(Character.getNumericValue(a));
-        System.out.println(Character.getNumericValue(z));
+        longitud = sc.nextInt();
+        Contrasena contra2 = new Contrasena();
+        System.out.println("Ingrese longitud de segunda contraseña: ");
+        contra2.generarContrasena(longitud);
+        System.out.println("La contraseña es : " + contra2.esFuerte());
+        System.out.println("La contraseña es: " +contra2.getContrasena());
+
+
+         */
+
+        /*
+        //PRUEBAS FECHAS
+
+        Fecha fecha = new Fecha("20-12-2021", "dd-MM-yyyy");
+        System.out.println("Primera Fecha: " + fecha.getFecha());
+        Fecha fecha2 = new Fecha("12-10-2021", "dd-MM-yyyy");
+        System.out.println("Segunda Fecha: " + fecha2.getFecha());
+        Fecha fecha3 = new Fecha("22-11-2021", "dd-MM-yyyy");
+        System.out.println("Tercera Fecha: " + fecha3.getFecha());
+
+        System.out.println("Fecha2 < Fecha3 < Fecha1 : " + fecha3.estaEntre(fecha2, fecha));
+        System.out.println("Fecha 1 > Fecha 2: " + fecha.mayorA(fecha2));
+        System.out.println("Fecha 2 > Fecha 1: " + fecha2.mayorA(fecha));
+        */
+
+
+
 
     }
 
