@@ -1,12 +1,5 @@
-import Objetos.ObjetoContraseña.Contrasena;
-import Objetos.ObjetosEcuaciones.EcuacionSegundoGrado;
-import Objetos.ObjetosFecha.Fecha;
-import Objetos.ObjetosListaTareas.Estado;
-import Objetos.ObjetosListaTareas.Tarea;
+import Objetos.ObjetosListaTareas.AdministradorTareas;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
 import java.util.Scanner;
 
 public class Main {
@@ -175,8 +168,48 @@ public class Main {
         */
 
 
+        //PRUEBAS JUEGO PALABRAS
+        /*
+        Jugador j1 = new Jugador("Bruno");
+        Jugador j2 = new Jugador("Roman");
 
+        System.out.println(j1.agregarPalabra("hola"));
+        System.out.println(j1.agregarPalabra("kiwi"));
+        System.out.println(j1.agregarPalabra("zzzz"));
+        System.out.println(j1.getPuntaje());
+        System.out.println(j2.agregarPalabra("supercalifragilisticoespialidoso"));
+        System.out.println(j2.agregarPalabra("bruno"));
+        if (j1.getPuntaje() > j2.getPuntaje()){
+            System.out.println("Ganador Jugador " + j1.getNombre());
+        }else if(j1.getPuntaje() < j2.getPuntaje()){
+            System.out.println("Ganador Jugador " + j1.getNombre());
+        }else{
+            System.out.println("Increible! Hubo un empate.");
+        }
 
+        */
+
+        /*
+        //PRUEBA GESTOR DE TAREAS
+
+        AdministradorTareas gestorTareas = new AdministradorTareas();
+        gestorTareas.agregarColaborador("bruno");
+        gestorTareas.agregarColaborador("joaquin");
+        gestorTareas.agregarTarea("descansar", "12-12-2023","10-12-2023", 2);
+        gestorTareas.agregarTarea("leer algun libro", "10-10-2023", "07-09-2023", 10);
+        gestorTareas.agregarTarea("hacer trabajos practicos", "27-09-2023", "07-09-2023", 9);
+        gestorTareas.agregarTarea("hacer compras", "30-09-2023", "02-09-2023", 8);
+        gestorTareas.agregarTarea("ver peliculas con mi novia", "30-09-2023", "01-09-2023", 1);
+        gestorTareas.agregarTarea("seguir estudiando", "09-02-2023", "10-12-2023", 6);
+        gestorTareas.ordenarTareas();
+        gestorTareas.marcarTareaRealizada("ver peliculas con mi novia", "12-10-2023", "Bruno");
+        gestorTareas.marcarTareaRealizada("seguir estudiando", "12-10-2023", "Bruno");
+        System.out.println(gestorTareas.mostrarTareas());
+        System.out.println("Posicion de tarea 'seguir estudiando': " + gestorTareas.buscarTarea("seguir estudiando"));
+
+        System.out.println("Tareas realizadas por colaborador bruno: \n" + gestorTareas.tareasRealizadasPorColaborador("bruno"));
+        System.out.println("Tareas realizadas por colaborador joaquin: \n" + gestorTareas.tareasRealizadasPorColaborador("joaquin"));
+        */
     }
 
 }

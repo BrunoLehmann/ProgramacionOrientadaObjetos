@@ -90,8 +90,6 @@ public class Lista {
             nodoListaSimpleAnt.setProximo(nuevoNodoListaSimple);
             nuevoNodoListaSimple.setProximo(nodoListaSimpleAux);
         }
-
-
     }
 
     public String toString(){
@@ -102,6 +100,19 @@ public class Lista {
             nodoListaSimpleAux = nodoListaSimpleAux.getProximo();
         }
     return acumulador;
+    }
+
+    public Boolean busquedaLineal(Object dato){
+        NodoSimple nodoAux = primerNodoListaSimple;
+        Boolean encontrado = false;
+
+        while((nodoAux != null) && (!encontrado)){
+            if (nodoAux.getDato().equals(dato)){
+                encontrado = true;
+            }
+            nodoAux = nodoAux.getProximo();
+        }
+        return encontrado;
     }
 
 
